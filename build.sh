@@ -3,7 +3,7 @@
 RED='\033[0;31m'
 NC='\033[0m' # No Color
 
-rm -rf build
+#rm -rf build
 mkdir -p build
 rm -rf dist/*
 #(cd build && emcmake cmake -DCMAKE_BUILD_TYPE=Debug ..)
@@ -22,4 +22,4 @@ fi
 mkdir -p ./dist
 cp ./build/src/dicomcodecswasm.js ./dist
 cp ./build/src/dicomcodecswasm.wasm ./dist
-#(cd test; node index.js)
+(cd test; /usr/bin/node index.js)

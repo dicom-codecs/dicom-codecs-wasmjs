@@ -8,8 +8,9 @@ const readAndDecode = (filePath, codec) => {
     dicomcodecs.decode(codec)
     const decodedBuffer = dicomcodecs.getDecodedBuffer()
     const image = dicomcodecs.getImage()
+    console.log('decoded ' + codec + ' image ' + image.width + "x" + image.height)
     image.rawBytes = decodedBuffer
-    console.log(image)
+    //console.log(image)
     return image
 }
 

@@ -23,9 +23,8 @@ RUN apt-get update \
     # Install C++ tools
     #&& apt-get -y install build-essential cmake cppcheck valgrind \
     && apt-get -y install build-essential cmake clang \
-    # version 3.17 of cmake
-    #& wget -qO- "https://cmake.org/files/v3.17/cmake-3.17.0-Linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C /usr/local\
-    #& wget -qO- "https://cmake.org/files/v3.17/cmake-3.17.0-Linux-x86_64.tar.gz" | tar --strip-components=1 -xz -C /usr/local\
+    && curl -sL https://deb.nodesource.com/setup_17.x | bash \
+    && apt-get install nodejs -yq \
     #
     # [Optional] Update UID/GID if needed
     && if [ "$USER_GID" != "1000" ] || [ "$USER_UID" != "1000" ]; then \
