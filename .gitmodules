@@ -1,0 +1,3 @@
+[submodule "extern/dicom-codecs"]
+	path = extern/dicom-codecs
+	url = https://github.com/dicom-codecs/dicom-codecs.git
