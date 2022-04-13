@@ -12,8 +12,11 @@ endif()
 # options to control whether or not we build specific libraries.  This allows users to easily add just the codecs they want
 option(DICOM_CODECS_BUILD_OPENJPEG "Build OpenJPEG" ON)
 option(DICOM_CODECS_BUILD_CHARLS "Build CharLS" ON)
-option(DICOM_CODECS_BUILD_LIBJPEGTURBO "Build libjpeg-turbo 8 bit" ON)
+option(DICOM_CODECS_BUILD_LIBJPEGTURBO8 "Build libjpeg-turbo 8 bit" ON)
 option(DICOM_CODECS_BUILD_IJG12 "Build IJG 12 bit" ON)
+option(DICOM_CODECS_BUILD_RLE "Build RLE" ON)
+option(DICOM_CODECS_BUILD_LJPEG6B16 "Build ljpeg-6b 16 bit Codec" ON)
+option(DICOM_CODECS_GDCM_JPEG16 "Build GDCM JPEG16 Codec" ON)
 
 # set all projects to build static libraries
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW) # need to explicitly set new behavior for option() to honor normal variables
